@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:task1/core/constant/app_color.dart';
 import 'package:task1/core/widgets/custem_button.dart' show CustemButton;
 
@@ -16,13 +17,18 @@ class Presentatin extends StatelessWidget {
             CustemButton(
               tilte: 'Gold',
               color: AppColor.primaryColor,
-              onTap: () {},
+              onTap: () {
+              context.push('/gold');
+
+            },
             ),
             SizedBox(height: 20,),
             CustemButton(
               tilte: 'Silver',
               color: AppColor.secondaryColor,
-              onTap: () {},
+              onTap: () {
+                 context.push('/silver');
+              },
             ),
           ],
         ),

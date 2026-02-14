@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task1/features/presentatin.dart' show Presentatin;
-
+import 'package:task1/core/routing/app_route.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -11,9 +10,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:  Presentatin(),
+       return MaterialApp.router(
+         debugShowCheckedModeBanner: false,
+         routerConfig: router,
     );
   }
 }
